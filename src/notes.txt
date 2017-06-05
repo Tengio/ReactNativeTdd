@@ -36,7 +36,10 @@ module.exports = StyleSheet.create({
 });
 
 
-
+                                   <Text>{userButtons[0].Stock}</Text>
+                                     <Text>{userButtons[0].Currency}</Text>
+                                       <Text>{userButtons[0].CurrentAmount}</Text>
+                                       <Text>{userButtons[0].change}</Text>
 
             <View>
                 <View style = {contentStyle.padding}/>

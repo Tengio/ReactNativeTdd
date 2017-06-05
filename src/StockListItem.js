@@ -11,17 +11,16 @@ export default class StockListItem extends Component {
   render() {
     return (
 
-      <Container>
-        <Content>
-          <Text style={ contentStyle.text }>
+
+          <Text>
             StockDataPlaceholder
           </Text>
-      </Content>
-      </Container>
 
 
       );
 
   }
 
+
 }
+
