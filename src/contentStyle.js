@@ -8,25 +8,26 @@ module.exports = StyleSheet.create({
     alignSelf: 'stretch',
     flex: 1,
   },
+  padding: {height: 12,},
+  
   box: {
     //width: 150,
     backgroundColor: 'powderblue',
     height: 100,
-    borderRadius: 4,
+    borderRadius: 1,
     alignSelf: 'stretch',
 
-    borderWidth: .3,
-    borderColor: 'black',
+    borderWidth: 1,
+    borderColor: 'white',
+    margin: 3,
   },
   button: {
-    backgroundColor: 'white',
-    height: 50,
-    borderRadius: 4,
-    alignSelf: 'stretch',
-    borderWidth: .3,
-    borderColor: 'black',
+    alignSelf: 'center',
   },
   text: {
     textAlign: 'center',
+  },
+  stockItem: {
+    alignSelf: 'stretch',
   },
 });

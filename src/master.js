@@ -1,42 +1,84 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import StockListItem from "./StockListItem";
-import { View, Text, FlatList, Button, Alert } from "react-native";
-import contentStyle from "./contentStyle"
+import {View, FlatList, Alert} from "react-native";
+import {
+    Container,
+    Button,
+    Text,
+    Header,
+    Content,
+    Card,
+    CardItem,
+    Body,
+    List,
+    ListItem
+} from 'native-base';
+import contentStyle from "./contentStyle";
+import getTheme from './native-base-theme/components';
 styles = require('./contentStyle');
 
 const onButtonPress = () => {
-    Alert.alert('Button has been pressed!');
+    addNewItem();
 };
+
+var userButtons = [
+    {
+        id: 1,
+        Stock: 'GoldSmiths',
+        Currency: 'USA',
+        CurrentAmount: 100,
+        change: + 10
+    }
+];
+
+var addNewItem = function () {
+    //add new stock slot
+    Alert.alert("" + userButtons[1]);
+
+}
 
 export default class master extends Component {
 
     constructor(props) {
         super(props)
-        this.data = [{
-            code: 5,
-            stock: 100
-
-        }, {
-            code: 6,
-            stock: 3000
-        },
+        this.data = [
             {
-                code: 7,
-                stock: 4000
+                code: 5,
+                stock: 100
             }
         ]
     }
 
     render() {
         return (
-            <View>
-              <FlatList data={ this.data } renderItem={ ({item}) => <StockListItem stock={ item } /> } />
-              <View style={ contentStyle.button }>
-                <Button onPress={ onButtonPress } style={ contentStyle.text } title="Learn More" color="#841584" accessibilityLabel="Learn more about this purple button" />
-              </View>
-            </View>
-            );
-    }
+            
+            <Container>
+                <Header>
+                    <Text>
+                        Stock Tracker TM
+                    </Text>
+                </Header>
 
+                <Content>
+                    <View style={contentStyle.button}>
+                        <View style={contentStyle.stockItem}>
+                            <List>
+                                <ListItem itemDivider>
+                                    <Text>{userButtons[0].stock}</Text>
+                                </ListItem>
+                                <ListItem itemDivider>
+                                    <Text>Stock Item 2</Text>
+                                </ListItem>
+                            </List>
+                        </View>
+                        <Button primary onPress={onButtonPress}>
+                            <Text>Add Tracker</Text>
+                        </Button>
+                    </View>
+                </Content>
+            </Container>
+ 
+        );
+    }
 
 }

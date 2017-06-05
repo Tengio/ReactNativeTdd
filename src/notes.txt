@@ -1,0 +1,47 @@
+import { View, Text, FlatList, StyleSheet } from "react-native";
+const React = require('react-native');
+const {Stylesheet} = React;
+
+module.exports = StyleSheet.create({
+  container: {
+    flexDirection: 'column',
+    alignSelf: 'stretch',
+    flex: 1,
+  },
+  padding: {height: 12,},
+  
+  box: {
+    //width: 150,
+    backgroundColor: 'powderblue',
+    height: 100,
+    borderRadius: 1,
+    alignSelf: 'stretch',
+
+    borderWidth: 1,
+    borderColor: 'white',
+    margin: 3,
+  },
+  button: {
+    backgroundColor: 'white',
+    height: 50,
+    borderRadius: 1,
+    width: 250,
+    alignSelf: 'center',
+    borderWidth: 1,
+    borderColor: 'blue',
+  },
+  text: {
+    textAlign: 'center',
+  },
+});
+
+
+
+
+            <View>
+                <View style = {contentStyle.padding}/>
+              <FlatList data={ this.data } key ={this.data.code} renderItem={ ({item}) => <StockListItem stock={ item } /> } />
+              <View style={ contentStyle.button }>
+                <Button onPress={ onButtonPress } style={ contentStyle.button } title="Add Tracker" accessibilityLabel="Search stock list & add tracker" />
+              </View>
+            </View>
